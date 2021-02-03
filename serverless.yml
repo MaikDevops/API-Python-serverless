@@ -28,7 +28,8 @@ functions:
           path: todos
           method: post
           cors: true
-
+          
+  
   list:
     handler: todos/list.list
     events:
@@ -36,6 +37,15 @@ functions:
           path: todos
           method: get
           cors: true
+
+    imageResize:
+        handler: todos/list.list
+        events:
+          - http:
+              path: /imageResize
+              method: get
+              cors: true
+
 
   get:
     handler: todos/get.get
