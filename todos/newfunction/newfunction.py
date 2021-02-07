@@ -6,7 +6,7 @@ dynamodb = boto3.resource('dynamodb')
 
     const response = {
         statusCode: 200,
-        body: JSON.stringify('Hello from Lambda!'),
+        body: JSON.stringify('Iniciativa VENGADORES Iniciada!'),
     };
     return response;
 };
