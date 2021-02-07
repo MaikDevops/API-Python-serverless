@@ -72,10 +72,10 @@ functions:
           cors: true
           
    newfunctionget:
-        handler: todos/newfunction
+        handler: todos/newfunction/newfunction.newfunction
         event:
             -http:
-                path: todos/{id}
+                path: todos/newfunction/{id}
                 method: get
                 cors: true
             
