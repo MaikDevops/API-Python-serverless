@@ -71,7 +71,7 @@ functions:
           method: delete
           cors: true
           
-   newfunctionget:
+  newfunctionget:
     handler: todos/newfunction/newfunction.newfunction
     event:
       - http:
