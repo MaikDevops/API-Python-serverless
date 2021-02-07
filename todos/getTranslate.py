@@ -1,20 +1,20 @@
 import json
 import boto3
 import os
-    translate = boto3.client('translate')
-    dynamodb = boto3.client('dynamodb')
-    firehose = boto3.client('firehose')
-    TABLE_NAME = os.getenv('TABLE_NAME')
-    logger = logging.getLogger()
-    logger.setLevel(logging.INFO)
-        def lambda_handler(event, context):
-            logger.info(event)
-                if 'source_language' in event and 'target_language' in event and 'review' in event and
-                    'review_id' in event:
-                        review_id = event['review_id']
-                        source_language = event['source_language']
-                        target_language = event['target_language']
-                        review = event['review']
+translate = boto3.client('translate')
+dynamodb = boto3.client('dynamodb')
+firehose = boto3.client('firehose')
+TABLE_NAME = os.getenv('TABLE_NAME')
+logger = logging.getLogger()
+logger.setLevel(logging.INFO)
+    def lambda_handler(event, context):
+    logger.info(event)
+        if 'source_language' in event and 'target_language' in event and 'review' in event and
+            'review_id' in event:
+            review_id = event['review_id']
+            source_language = event['source_language']
+            target_language = event['target_language']
+            review = event['review']
         try:
         # The Lambda function queries the Amazon DynamoDB table to check whether
         # the review has already been translated. If the translated review
