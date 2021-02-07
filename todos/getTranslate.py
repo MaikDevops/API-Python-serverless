@@ -8,7 +8,7 @@ TABLE_NAME = os.getenv('TABLE_NAME')
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)
 def lambda_handler(event, context):
-logger.info(event)
+logger.info('event')
         if 'source_language' in event and 'target_language' in event and 'review' in event and
             'review_id' in event:
             review_id = event['review_id']
