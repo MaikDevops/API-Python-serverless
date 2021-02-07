@@ -38,11 +38,11 @@ functions:
           method: get
           cors: true
 
-  imageResize:
-     handler: todos/list.list
+  getTranslate:
+     handler: todos/get.get
      events:
        - http:
-           path: /imageResize
+           path: todos/{id}
            method: get
            cors: true
 
@@ -75,7 +75,7 @@ functions:
     handler: todos/newfunction/newfunction.newfunction
     event:
       - http:
-          path: todos/newfunction/{id}
+          path: todos/{id}/{lan}
           method: get
           cors: true
             
