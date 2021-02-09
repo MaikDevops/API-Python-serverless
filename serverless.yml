@@ -27,8 +27,7 @@ functions:
       - http:
           path: todos
           method: post
-          cors: true
-          
+          cors: true      
   
   list:
     handler: todos/list.list
@@ -39,13 +38,12 @@ functions:
           cors: true
 
   getTranslate:
-     handler: todos/get.get
+     handler: todos/getTranslate.getTranslate
      events:
        - http:
            path: todos/{id}
            method: get
            cors: true
-
 
   get:
     handler: todos/get.get
