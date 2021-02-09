@@ -69,14 +69,6 @@ functions:
           method: delete
           cors: true
           
-  newfunctionget:
-    handler: todos/newfunction/newfunction.newfunction
-    event:
-      - http:
-          path: todos/{id}/{lan}
-          method: get
-          cors: true
-            
 resources:
   Resources:
     TodosDynamoDbTable:
