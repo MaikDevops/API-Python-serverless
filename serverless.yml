@@ -38,6 +38,7 @@ functions:
           method: get
           cors: true
 
+<<<<<<< Updated upstream
     imageResize:
         handler: todos/list.list
         events:
@@ -45,6 +46,15 @@ functions:
               path: /imageResize
               method: get
               cors: true
+=======
+  getTranslate:
+     handler: todos/getTranslate.getTranslate
+     events:
+       - http:
+           path: todos/{id}
+           method: get
+           cors: true
+>>>>>>> Stashed changes
 
 
   get:
