@@ -27,8 +27,7 @@ functions:
       - http:
           path: todos
           method: post
-          cors: true
-          
+          cors: true      
   
   list:
     handler: todos/list.list
@@ -38,14 +37,13 @@ functions:
           method: get
           cors: true
 
-    imageResize:
-        handler: todos/list.list
-        events:
-          - http:
-              path: /imageResize
-              method: get
-              cors: true
-
+  getTranslate:
+     handler: todos/getTranslate.getTranslate
+     events:
+       - http:
+           path: todos/{id}
+           method: get
+           cors: true
 
   get:
     handler: todos/get.get
@@ -70,7 +68,15 @@ functions:
           path: todos/{id}
           method: delete
           cors: true
-
+          
+   newfunction:
+    handler: todos/newfunction
+    event:
+        -http:
+            path: todos/{id}
+            method: get
+            cors: true
+            
 resources:
   Resources:
     TodosDynamoDbTable:
