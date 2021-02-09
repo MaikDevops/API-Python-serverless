@@ -69,13 +69,13 @@ functions:
           method: delete
           cors: true
           
-   newfunction:
-    handler: todos/newfunction
+  newfunctionget:
+    handler: todos/newfunction/newfunction.newfunction
     event:
-        -http:
-            path: todos/{id}
-            method: get
-            cors: true
+      - http:
+          path: todos/{id}/{lan}
+          method: get
+          cors: true
             
 resources:
   Resources:
